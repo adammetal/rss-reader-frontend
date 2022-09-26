@@ -1,0 +1,13 @@
+<div *ngIf="items">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+  <a href="{{ link }}" target="_blank">{{ link }}</a>
+
+  <div class="feed">
+    <mat-card *ngFor="let item of items">
+      <mat-card-title
+        ><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></mat-card-title
+      >
+    </mat-card>
+  </div>
+</div>

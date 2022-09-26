@@ -1,0 +1,9 @@
+.feed > mat-card {
+  margin: 2rem;
+}
+
+.feed > mat-card a {
+  text-decoration: none;
+  color: black;
+}
+

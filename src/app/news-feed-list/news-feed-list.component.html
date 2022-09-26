@@ -1,0 +1,7 @@
+<div class="grid">
+  <app-news-feed-card
+    *ngFor="let source of sources"
+    [title]="source.title"
+    [description]="source.description"
+  ></app-news-feed-card>
+</div>
