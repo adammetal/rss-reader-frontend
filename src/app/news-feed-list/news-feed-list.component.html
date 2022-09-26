@@ -4,4 +4,29 @@
     [title]="source.title"
     [description]="source.description"
   ></app-news-feed-card>
+  <mat-card>
+    <mat-card-title>
+      <mat-form-field>
+        <mat-label>Rss Source Title</mat-label>
+        <input matInput [(ngModel)]="title" />
+      </mat-form-field>
+    </mat-card-title>
+    <mat-card-content>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Rss Source Desctiption</mat-label>
+          <input matInput [(ngModel)]="description" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Rss Source Url</mat-label>
+          <input matInput [(ngModel)]="url" />
+        </mat-form-field>
+      </div>
+      <div>
+        <button (click)="addNew()" mat-raised-button color="primary">Add new source</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

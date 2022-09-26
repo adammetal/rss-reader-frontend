@@ -4,3 +4,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+
+mat-form-field {
+  width: 100%;
+}
