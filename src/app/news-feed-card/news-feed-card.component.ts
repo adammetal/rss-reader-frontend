@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SourceItem } from '../SourceItem';
 
 @Component({
   selector: 'app-news-feed-card',
@@ -9,11 +10,5 @@ export class NewsFeedCardComponent {
   constructor() {}
 
   @Input()
-  title: string = 'News feed title';
-
-  @Input()
-  description: string = 'News feed description';
-
-  @Input()
-  url: string = '';
+  source!: SourceItem
 }

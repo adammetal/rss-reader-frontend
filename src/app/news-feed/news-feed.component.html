@@ -1,6 +1,7 @@
 <div *ngIf="items">
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
+  <img *ngIf="image" src="{{ image }}" alt="">
   <a href="{{ link }}" target="_blank">{{ link }}</a>
 
   <div class="feed">

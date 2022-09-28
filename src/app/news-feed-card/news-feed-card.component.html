@@ -1,8 +1,14 @@
 <mat-card>
-  <mat-card-title>{{ title }}</mat-card-title>
-  <mat-card-content>{{ description }}</mat-card-content>
+  <mat-card-title>{{ source.title }}</mat-card-title>
+  <img
+    mat-card-image
+    *ngIf="source.image"
+    src="{{ source.image }}"
+    alt="{{ source.title }}"
+  />
+  <mat-card-content>{{ source.description }}</mat-card-content>
   <mat-card-actions>
-    <button routerLink="/feed/{{ title }}" color="primary" mat-button>
+    <button routerLink="/feed/{{ source.title }}" color="primary" mat-button>
       Open
     </button>
   </mat-card-actions>

@@ -11,6 +11,8 @@ import { RssFeedService } from '../rss-feed.service';
 export class NewsFeedComponent implements OnInit {
   constructor(private route: ActivatedRoute, private rss: RssFeedService) {}
 
+  image?: string | null;
+
   title?: string;
 
   description?: string;
@@ -26,6 +28,10 @@ export class NewsFeedComponent implements OnInit {
       // TODO: Navigate back to the main page
       return;
     }
+
+    this.rss.getFeedImageByTitle(title).subscribe((image) => {
+      this.image = image;
+    });
 
     this.rss.getFeedByTitle(title).subscribe((feed) => {
       if (!feed) {
